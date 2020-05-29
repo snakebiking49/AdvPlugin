@@ -1,3 +1,9 @@
 name: AdvPlugin
 main: com.github.kareemBarton
 version: 0.0.1-SNAPSHOT
+commands:
+   setGroup:
+      description: Sets the group no. of a player.
+      usage: /<command>[player][group]
+      permission: AdvPlugin.setGroup
+      permission-message: You don't have <permission>
