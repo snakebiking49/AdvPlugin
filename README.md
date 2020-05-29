@@ -1,3 +1,3 @@
 # AdvPlugin
 Adv Plugin
-Nothing here yet.
+This is a maven project using bukkit for java plugins.
