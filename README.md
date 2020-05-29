@@ -1,6 +1,6 @@
 # AdvPlugin
 Adv Plugin
-This is a maven, Bukkit based java plugin for Minecraft server, running adventure maps, with tema sof players. 
+This is a maven, Bukkit based java plugin for Minecraft server, running adventure maps, with teams of players. 
 Commands:
           setGroup:
                     Allows admin to set players to a group of other player. This will also add a scoreboard tag to the player with the group number/name.
