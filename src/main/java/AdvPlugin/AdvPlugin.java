@@ -6,20 +6,21 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 public class AdvPlugin extends JavaPlugin
 {
-	List <Player> playerlist;
+	List <Player> playerlist;//online players
+	List <Player> AdvPlayersList;//online players who have joined the event
 	@Override
 	public void onEnable()
 	{
-		
-		//TODO Add listener and command executer
+		getLogger().info("The AdvPlugin is being enabled!");
+		new AdvEventListener(this);
+		this.getCommand("setGroup").setExecutor(new AdvCommandExecutor(this));
 		for (Player player : Bukkit.getServer().getOnlinePlayers()) 
-		{
-			this.getCommand("setGroup").setExecutor(new AdvCommandExecutor(this));
+		{	
 		    playerlist.add(player);   
 		}
 	}
 	public void onDisable()
 	{
-		
+		getLogger().info("The Advplugin is being disabled!");
 	}
 }

@@ -16,37 +16,77 @@ public class AdvCommandExecutor implements CommandExecutor
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) 
 	{	
+		//setgroup
 		if(command.getName().equalsIgnoreCase("setGroup"))
 		{
 			return tagCommandsargs1(sender,command,command.getName(),args);
 		}
+		//setRank
+		if(command.getName().equalsIgnoreCase("setRank"))
+		{
+			return tagCommandsargs1(sender,command,command.getName(),args);
+		}
+		//joinAdv event
+		if(command.getName().equalsIgnoreCase("joinAdv"))
+		{
+			return eventJoin(sender,command,command.getName(),args);
+		}
 	
-			return false;
+		return false;
 	}
 	
-	
+	//Commands that add tags to players in args[1]
 	private boolean tagCommandsargs1(CommandSender sender, Command command, String name, String args[])
 	{
-		//Commands that add tags to players in args[1]
-			if(sender.hasPermission("AdvPlugin." + name))
+		
+			if(sender.hasPermission("AdvPlugin." + name))//Does the sender have permission?
 			{
-				if(args.length != 2)
+				if(args.length != 2)//Has the sender typed the correct amount of arguments?
 				{
 					sender.sendMessage("incorrect ammount of arguments!");
 				}
 				else
 				{
-					for(Player player: plugin.playerlist) 
+					for(Player player: plugin.playerlist) //Iterate through player list to find the mentioned player
 					{
 						if(player.getName().contentEquals(args[0]))
 						{
 							player.addScoreboardTag(args[1]);
 							return true;
 						}
+						else
+						{
+							sender.sendMessage(args[0] + "is not online!");
+						}
 					}
 				}
 			}
 			return false;
+	}
+	//The method for /joinAdv
+	private boolean eventJoin(CommandSender sender, Command command, String name, String args[])
+	{
+		if(sender instanceof Player)//is sender player?
+		{
+			if(plugin.AdvPlayersList.contains(sender))//has the player already joined?
+			{
+				sender.sendMessage("You have allready joined the Pure Quests!");
+				return false;
+			}
+			else
+			{
+				plugin.AdvPlayersList.add((Player)sender);
+				sender.sendMessage("Welcome to the Pure Quests!");
+				sender.sendMessage("Please wait for the event Admins to teleport you.");
+				return true;
+			}
+		}
+		else
+		{
+			sender.sendMessage("You must be a player to use this command!");
+			return false;
+		}
+		
 	}
 }
 			

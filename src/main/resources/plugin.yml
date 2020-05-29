@@ -1,9 +1,19 @@
 name: AdvPlugin
-main: com.github.kareemBarton
+main: com.github.kareemBarton.AdvPlugin.AdvPlugin
 version: 0.0.1-SNAPSHOT
 commands:
    setGroup:
       description: Sets the group no. of a player.
       usage: /<command>[player][group]
       permission: AdvPlugin.setGroup
+      permission-message: You don't have <permission>
+   setRank:
+      description: Sets the rank of a player.
+      usage: /<command>[player][rank]
+      permission: AdvPlugin.setRank
+      permission-message: You don't have <permission>
+    joinAdv:
+      description: Join the Adventure event
+      usage: /<command>
+      permission: 
       permission-message: You don't have <permission>
