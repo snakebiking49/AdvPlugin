@@ -10,6 +10,7 @@ public class AdvPLugin extends JavaPlugin
 	@Override
 	public void onEnable()
 	{
+		//TODO Add listener and command executer
 		for (Player player : Bukkit.getServer().getOnlinePlayers()) 
 		{
 		    playerlist.add(player);   
