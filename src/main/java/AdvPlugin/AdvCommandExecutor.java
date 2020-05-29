@@ -16,7 +16,7 @@ public class AdvCommandExecutor implements CommandExecutor
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) 
 	{	
-		//setgroup
+		//setgroup r
 		if(command.getName().equalsIgnoreCase("setGroup"))
 		{
 			return tagCommandsargs1(sender,command,command.getName(),args);
