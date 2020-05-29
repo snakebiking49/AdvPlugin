@@ -1,0 +1,18 @@
+name: TestPlugin
+main: com.gmail.kareem.cort.barton.TestPlugin.TestPlugin
+version: 0.0.1-SNAPSHOT
+ name: Basic
+main: com.google.kareem.cort.barton.TestPLugin.TestPLugin
+version: o.o.1-SNAPSHOT
+author: Kareem
+commands:
+   setGroup:
+      description: Sets group for player.
+      usage: /setGroup [<player> <group>]
+      permission: TestPLugin.setGroup
+      permission-message: You don't have <permission>
+   setRank:
+      description: Sets rank of Player.
+      usage: /setRank [<player>]
+      permission: TestPlugin.setRank
+      permission-message: You don't have <permission>
