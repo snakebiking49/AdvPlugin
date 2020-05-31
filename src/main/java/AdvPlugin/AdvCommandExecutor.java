@@ -78,6 +78,9 @@ public class AdvCommandExecutor implements CommandExecutor
 				plugin.AdvPlayersList.add((Player)sender);
 				sender.sendMessage("Welcome to the Pure Quests!");
 				sender.sendMessage("Please wait for the event Admins to teleport you.");
+				plugin.getServer().dispatchCommand(sender, "saveInv");
+				plugin.getServer().dispatchCommand(sender, "mv goto AdventureWorld");
+				plugin.getServer().dispatchCommand(plugin.getServer().getConsoleSender(), "adventure " + sender);
 				return true;
 			}
 		}
@@ -89,10 +92,4 @@ public class AdvCommandExecutor implements CommandExecutor
 		
 	}
 }
-			
-	
-	
-	
-	
-	
 

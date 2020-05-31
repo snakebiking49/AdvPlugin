@@ -8,6 +8,7 @@ public class AdvPlugin extends JavaPlugin
 {
 	List <Player> playerlist;//online players
 	List <Player> AdvPlayersList;//online players who have joined the event
+	
 	@Override
 	public void onEnable()
 	{
@@ -18,6 +19,8 @@ public class AdvPlugin extends JavaPlugin
 		{	
 		    playerlist.add(player);   
 		}
+		
+	
 	}
 	public void onDisable()
 	{
