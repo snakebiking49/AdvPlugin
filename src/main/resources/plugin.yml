@@ -15,5 +15,30 @@ commands:
     joinAdv:
       description: Join the Adventure event
       usage: /<command>
-      permission: 
+      permission: AdvPlugin.joinAdv
+      permission-message: You don't have <permission>
+    createGame:
+      description: Create the Adventure event
+      usage: /<command>
+      permission: AdvPlugin.createGame
+      permission-message: You don't have <permission>
+    destroyGame:
+      description: Destroy the Adventure event
+      usage: /<command>
+      permission: AdvPlugin.destroyGame
+      permission-message: You don't have <permission>
+    leaveAdv:
+      description: Leave the Adv event
+      usage: /<command>
+      permission: AdvPlugin.leaveAdv
+      permission-message: You don't have <permission>
+    setGroupHome:
+      description: Set the home for a group
+      usage: /<command>
+      permission: AdvPlugin.setGroupHome
+      permission-message: You don't have <permission>
+    startGame:
+      description: syart the event
+      usage: /<command>
+      permission: AdvPlugin.startGame
       permission-message: You don't have <permission>

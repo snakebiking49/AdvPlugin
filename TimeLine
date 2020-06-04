@@ -1,0 +1,9 @@
+TimeLine:
+	•PLugin Starts
+	•Admin initializes /createGame
+	•Users join /joinAdv
+	•Admin assigns groups /setGroup
+	•Admin sets group home locations /setGroupHome
+	•Admin starts event /startGame
+	•Players leave game /leaveAdv
+	•Admin finishes event /destroyGame	
