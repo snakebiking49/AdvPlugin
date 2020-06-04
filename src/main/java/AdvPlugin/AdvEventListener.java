@@ -21,11 +21,12 @@ public final class AdvEventListener implements Listener
     {
        plugin.playerlist.add(event.getPlayer());
     }
+    
+    @EventHandler(priority = EventPriority.MONITOR)
     public void logout(PlayerQuitEvent event)// player leaves
     {
-    	for(Player player: plugin.playerlist)
-    	{
-    		if(player.equals(event.getPlayer()))
+    	Player player = event.getPlayer();
+    		if(plugin.playerlist.contains(player))
     		{
     			plugin.playerlist.remove(player);
     			if(plugin.AdvPlayersList.contains(player))
@@ -33,7 +34,7 @@ public final class AdvEventListener implements Listener
     				plugin.AdvPlayersList.remove(player);
     			}
     		}
-    	}
+    	
     }
 
    
