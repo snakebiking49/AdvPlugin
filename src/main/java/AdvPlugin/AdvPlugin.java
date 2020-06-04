@@ -8,18 +8,18 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 public class AdvPlugin extends JavaPlugin
 {
-	List <Player> playerlist;//online players
-	List <Player> AdvPlayersList;//online players who have joined the event
+	List <Player> playerlist; //Online players
+	List <Player> AdvPlayersList; //Online players who have joined the event
 	Boolean event = false;
 	World adventureWorld = this.getServer().getWorld("AdventureWorld");
-	Location group1 = new Location(this.getServer().getWorld("AdventureWorld"),0,200,0);
-	Location group2 = new Location(this.getServer().getWorld("AdventureWorld"),0,200,0);
-	Location group3 = new Location(this.getServer().getWorld("AdventureWorld"),0,200,0);
-	Location group4 = new Location(this.getServer().getWorld("AdventureWorld"),0,200,0);
+	Location group1 = new Location(this.getServer().getWorld("AdventureWorld"), 0, 200, 0);
+	Location group2 = new Location(this.getServer().getWorld("AdventureWorld"), 0, 200, 0);
+	Location group3 = new Location(this.getServer().getWorld("AdventureWorld"), 0, 200, 0);
+	Location group4 = new Location(this.getServer().getWorld("AdventureWorld"), 0, 200, 0);
 	@Override
 	public void onEnable()
 	{
-		getLogger().info("The AdvPlugin is being enabled!");
+		getLogger().info("[AdventureWorld] The AdvPlugin is being enabled!");
 		new AdvEventListener(this);
 		this.getCommand("setGroup").setExecutor(new AdvCommandExecutor(this));
 		this.getCommand("setRank").setExecutor(new AdvCommandExecutor(this));
@@ -38,6 +38,6 @@ public class AdvPlugin extends JavaPlugin
 	}
 	public void onDisable()
 	{
-		getLogger().info("The Advplugin is being disabled!");
+		getLogger().info("[AdventureWorld] The Advplugin is being disabled!");
 	}
 }
